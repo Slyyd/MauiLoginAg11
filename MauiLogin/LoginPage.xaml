@@ -3,10 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiLogin.LoginPage"
              Title="LoginPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout VerticalOptions="Center">
+        
+        <Label Text="LOGIN" 
+               TextColor="#F00000" 
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="35"
+               Margin="40"
+               />
+    
+        <Label Text="Nome de usuário:"
+               HorizontalOptions="Center"
+               Margin="10"
+               FontSize="20"/>
+
+        <Entry x:Name="txt_usuario" 
+               Placeholder="Usuário"
+               Margin="10"/>
+
+        <Label Text="Senha:"
+               HorizontalOptions="Center"
+               Margin="10"
+               FontSize="20"/>
+
+        <Entry x:Name="txt_senha"
+               Placeholder="Senha"
+               Margin="10"
+               IsPassword="True"/>
+
+        <Label x:Name="l_retorno" 
+               Text="Senha ou usuário errado!"
+               IsVisible="False"
+               TextColor="IndianRed"
+               FontAttributes="Bold,Italic"
+               Margin="10"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <Button Text="Enviar"
+                Margin="10"
+                BackgroundColor="#F00000"
+                TextColor="White"
+                Clicked="Button_Clicked"
+                />
+                
     </VerticalStackLayout>
 </ContentPage>

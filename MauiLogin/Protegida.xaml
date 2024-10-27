@@ -3,10 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiLogin.Protegida"
              Title="Protegida">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    
+    <VerticalStackLayout VerticalOptions="Center"
+                         Padding="10"
+                         Spacing="10">
+
+        <Frame BackgroundColor="White">
+
+            <VerticalStackLayout>
+
+                <Label Text="Parabéns, você conseguiu!"
+                       HorizontalOptions="Center"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+
+                <Label x:Name="l_nome" 
+                       Text="Olá, Kauê!"
+                       HorizontalOptions="Center"
+                       TextColor="Black"
+                       Padding="10"/>
+
+                <Button Text="Desconectar" 
+                        BackgroundColor="Red"
+                        FontSize="20"
+                        Margin="10"
+                        FontAttributes="Bold"
+                        BorderWidth="3"
+                        BorderColor="Black"
+                        Clicked="btn_clicked"/>
+
+            </VerticalStackLayout>
+            
+            
+        </Frame>
+        
+        
+        
+        
     </VerticalStackLayout>
+    
 </ContentPage>
